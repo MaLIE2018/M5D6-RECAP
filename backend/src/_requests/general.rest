@@ -1,0 +1,45 @@
+GET http://localhost:3001/products
+
+#####################
+
+GET http://localhost:3001/products/4zAylGpLq4q7_xR1d7_4Y
+
+#####################
+
+
+POST http://localhost:3001/products
+Content-type: application/json
+
+{
+    "name": "Cross line laser",
+    "description": "Easy alignment: Thanks to the 360° horizontal line and 120° vertical line, objects can be precisely aligned throughout the room after a unique set up.",
+    "brand": "Bosch",
+    "imageUrl": "",
+    "price": 94.99,
+    "category": "tools"
+}
+
+#####################
+
+DELETE http://localhost:3001/products/rtUxTCZPs3WXWXx2o9aZ9
+
+#####################
+
+PUT http://localhost:3001/products/4zAylGpLq4q7_xR1d7_4Y
+Content-Type: application/json
+
+{
+    "name": "Cross line laser",
+    "description": "Easy alignment: Thanks to the 360° horizontal line and 120° vertical line, objects can be precisely aligned throughout the room after a unique set up.",
+    "brand": "Bosch",
+    "imageUrl": "",
+    "price": 94.98,
+    "category": "tools"
+}
+
+####
+
+POST http://localhost:3001/product/4zAylGpLq4q7_xR1d7_4Y/upload
+Content-Type: multipart/form-data; name: cover
+
+< C:\webdev\DSC09736cut.jpg
